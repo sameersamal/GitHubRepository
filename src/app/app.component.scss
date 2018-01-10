@@ -1,0 +1,112 @@
+.header { box-shadow: 4px 0px 4px #000;
+    
+  .navbar-inverse{ z-index:1001; position:fixed; width:100%; background-color:#004da1; box-shadow: 0px 0px 2px #000; border-radius:0px !important;
+        .navbar-nav>li>a { background-color:transparent; width:8em; height:72px; text-align:center; font-size:15px; color:#fff !important; height:72px; padding-top:25px; transition-property: background-color, padding-top; transition-duration: 0.6s !important;  }
+        .navbar-nav>li>a:hover { background-color:#fff; height:72px; padding-top:40px; color:#000 !important; }
+        .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { 
+            background-color: #fff !important; color:#004da1 !important; height:72px !important;
+        }
+
+        ul.nav.navbar-nav li:hover  { 
+            // background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+            // background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            // background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+            background-color: #fff !important; color:#004da1 !important; height:71px !important; transition-property: background-color; transition-duration: 0.6s;
+            box-shadow: 3px 0px 4px #333;
+         }
+
+        .form-group a { font-size:10px; color:#fff; text-decoration: underline }
+        .form-group span { margin-left: 0px; margin-right:10px }
+    }
+    
+    .dropmenu { float:left; position:relative; padding:20px; width:100%; margin-top:-2px; transition-property: background; transition-duration:1s !important;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(217,217,217,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(217,217,217,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d9d9d9',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 4px 4px #333;
+        ul { margin-left:-20px;
+            li { list-style-type: none; float:left; width:auto; padding:20px 40px 20px 0px; text-align: center;
+            img { margin-bottom:10px; margin-top:0px; box-shadow:0px 6px 4px #000; border:solid 1px #fff; border-radius:70px }
+            div a { color:#004da1; font-weight:bold; font-size:15px; }
+            }
+        }
+        p { color:#000; font-size:15px; font-weight:normal }
+        .closebtn { color:#000; font-weight:bold; font-size:12px; }
+    }
+   
+    .logo { padding:4px; background: #fff; box-sizing:border-box; text-align:center; border-top-left-radius:0px; border-bottom-left-radius:0px;
+        img { height: 50px; width:auto; padding-left:15px; }
+        .logoslogan { font-family: Arial; color:#000; font-size:11px; }
+    }
+    .shopplan { text-align:left; line-height:30px; margin-top:30px; }
+    .helplinks { text-align:left; line-height:30px; margin-top:0px; }
+    .vrule { border-left:solid 1px #fff; height:150px; box-shadow: 0px 2px 2px #000 }
+    
+    /* Mobile Navbar */
+    #mobileview {   
+        ul.navbar-nav>li {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            line-height: 20px !important;
+            background-color:#004da1 !important;
+            color:#fff !important;
+        }
+      }
+    #mobtopnav {
+        ul li {
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 20px;
+            background-color:#004da1 !important;
+            color:#fff !important;
+        }
+    }
+       }
+
+     /* Media Querries Fix */
+     @media (min-width: 768px) and (max-width: 1200px) {
+        .navbar-nav>li>a {
+            float: left;
+            width: 6em !important;
+        }
+     }
+
+
+}
+
+    .pgheading { color:#000 }
+    
+    .panel {
+    .panel-default {
+         z-index:50; position:relative; width:100%; background-color:#fff; border:solid 0px brown; opacity:0.9; padding:0px; cursor: pointer !important;
+        .panel-heading { font-weight:bold;
+            .expand { background-color: #f47200 }
+            .collapse { background-color: #ccc }
+        }
+    
+        .panel-body { color:#000 !important;
+            ul label { font-weight:bold; font-size:16px; }
+            ul li:first-child { font-weight:bold; font-size:18px; list-style-type: none; }
+            ul li { list-style: square; list-style-position: inside; }
+        }
+    }
+    span { margin-right:10px !important }
+    }
+
+    
+    
+    .footer { float:left; width:100%; font-size:11px; color:#000; background-color:#004da1; padding:25px; border-radius:0px !important;
+        .links {
+            ul { width:100%;
+                li { float:left; margin-left:10px; font-size:14px; margin-right:35px; list-style-type:none; display:block; line-height:40px;
+                    a { color:#fff; display:block }
+                }
+            }
+        }
+    p { color:#fff }
+    .hrule { float:left; width:100%; }
+    }

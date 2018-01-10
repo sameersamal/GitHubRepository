@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+body {margin:0px; padding:0px; background-color:#fff; }
+p { color:#000 }
+.container-fluid { margin:0px; padding:0px !important }
+
+/* @media screen and (min-width:320px) and (max-width:417px) {
+    body #slidingbanner { height:13rem; width:100% !important }
+}
+@media screen and (min-width:418px) and (max-width:599px) {
+    body #slidingbanner { height:16.5rem; width:100% !important }
+}
+@media screen and (min-width:600px) and (max-width:767px) {
+    body #slidingbanner { height:26.8	rem; width:100% !important }
+}
+@media screen and (min-width:768px) {
+    body #slidingbanner { height:28rem; width:100% !important }
+}
+@media screen and (min-width:800px) {
+    body #slidingbanner { height:35.4rem; width:100% !important }
+}
+@media screen and (min-width:1024px) {
+    body #slidingbanner { height:36.6rem; width:100% !important }
+}
+@media screen and (min-width:1280px) {
+    body #slidingbanner { height:43.1rem; width:100% !important }
+}
+@media screen and (min-width:1366px) {
+    body #slidingbanner { height:47.3rem; width:100% !important }
+}
+@media screen and (min-width:1440px) {
+    body #slidingbanner { height:51.5rem; width:100% !important }
+}
+@media screen and (min-width:1499px) {
+    body #slidingbanner { height:53.7rem; width:100% !important }
+}
+@media screen and (min-width:1500px) {
+    body #slidingbanner { height:54.3rem; width:100% !important }
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+} */
+
+/* page body style class */
+.maindiv { margin-top:73px; margin-left:0px }
+

@@ -1,3 +1,194 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<!-- header starts -->
+<div class="row">
+  <div class="header">
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" (click)="mobileMenu()" class="navbar-toggle" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="logo">
+              <a [routerLink]="['']" (click)="homeMenu()">
+                <img src="assets/images/img_tracfone_logo.png" />
+              </a>
+              <div class="logoslogan">For Moments that Matter</div>
+              </div>            
+            </div>
+
+
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <button type="button" (click)="mobileMenu()" class="navbar-toggle visible-sm"  aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <ul class="nav navbar-nav hidden-sm">
+                <li routerLinkActive="active"><a [routerLink]="['shop']" (mouseenter)="shopMenu()">{{navmenu.tabone}}</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['refill']" (mouseenter)="refillMenu()">{{navmenu.tabtwo}}</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['activate']" (mouseenter)="activateMenu()">{{navmenu.tabthree}}</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['help']" (mouseenter)="helpMenu()">{{navmenu.tabfour}}</a></li>
+              </ul>
+            <div class="pull-right hidden-sm">
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div>
+                      <span><a href="#">Find a Store</a></span>
+                      <span><a href="#">ESPANOL</a></span>
+                    </div>
+                  </div>
+                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+              </form>
+              
+              <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active"><a [routerLink]="['deals']" (mouseenter)="deals()">{{navmenu.tabfive}}</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['myaccount']" (mouseenter)="myaccount()"><span class="glyphicon glyphicon-user"></span><span class="caret"></span></a></li>
+              </ul>
+            </div>
+          </div><!-- /.navbar-collapse -->
+            <div *ngIf="isShow" class="dropmenu" (mouseleave)="closeMenu()">
+                <ul *ngIf="isShop" [@myTrigger] = 'shopMenu()'>
+                  <div class="pull-right close hidden-lg" (click)="closeMenu()"><a href="#" class="closebtn">CLOSE</a></div>
+                  <p>Shop for plans, the latest phones, or even bring your own device</p>
+                  <li>
+                    <img src="assets/images/img-menu_serviceplans_new.png" width="120" />
+                    <div><a href="#">Airtime Cards</a></div>
+                  </li>
+                  <li>
+                    <img src="assets/images/img-menu_phones_new.png" width="120" />
+                    <div><a href="#">Phones</a></div>
+                  </li>
+                  <li>
+                    <img src="assets/images/img-menu_byop_new.png" width="120" />
+                    <div><a href="#">Buy Sim Cards</a></div>
+                  </li>
+                  <li>
+                    <img src="assets/images/img-menu_devices_new.png" width="120" />
+                    <div><a href="#">Protect your Phones</a></div>
+                  </li>
+                  <li><div class="vrule"></div></li>
+                  <li>
+                    <div class="shopplan">
+                    <div><a href="#">International Long Distance</a></div>
+                    <div><a href="#">Phone Payment Plan</a></div>
+                    <div><a href="#">TracFone Extras</a></div>
+                    </div>
+                  </li>
+                </ul>
+                <ul *ngIf="isRefill" [@myTrigger] = 'refillMenu()'>
+                    <div class="pull-right close hidden-lg" (click)="closeMenu()"><a href="#">CLOSE</a></div>
+                    <p>Refill your plan or sign up for Auto-Refill.</p>
+                    <li>
+                      <img src="assets/images/img-menu_refillnow_new.png" width="120" />
+                      <div><a href="#">Refill</a></div>
+                    </li>
+                    <li>
+                      <img src="assets/images/img-menu_autorefill_new.png" width="120" />
+                      <div><a href="#">Auto Refill</a></div>
+                    </li>
+                  </ul>
+                    <ul *ngIf="isHelp" [@myTrigger] = 'helpMenu()'>
+                      <div class="pull-right close hidden-lg" (click)="closeMenu()"><a href="#">CLOSE</a></div>
+                      <p>Looking for help? You’ve come to the right place.</p>
+                        <li>
+                          <img src="assets/images/img-menu_service_balance_new.png" width="120" />
+                          <div><a href="#">Check your Balance</a></div>
+                        </li>
+                        <li>
+                          <img src="assets/images/img-menu_apnsettings_new.png" width="120" />
+                          <div><a href="#">Update Data Settings</a></div>
+                        <li>
+                          <img src="assets/images/img-menu_transfernumber_new.png" width="120" />
+                          <div><a href="#">Switch Number</a></div>
+                        </li>
+                        <li>
+                          <img src="assets/images/img-menu_faq_new.png" width="120" />
+                          <div><a href="#">FAQ</a></div>
+                        </li>
+                        <li><div class="vrule"></div></li>
+                        <li>
+                          <div class="helplinks">
+                            <div><a href="#">611611 for Self Help</a></div>
+                            <div><a href="#">Coverage Map</a></div>
+                            <div><a href="#">Tutorials & User Manuals</a></div>
+                            <div><a href="#">Track My Order</a></div>
+                            <div><a href="#">Track My Ticket</a></div>
+                          </div>
+                        </li>
+                        <li><div class="vrule"></div></li>
+                        <li>
+                            <div class="helplinks">
+                                <div><a href="#">Contact Us</a></div>
+                                <div><a href="#">What is Wi-Fi Calling?</a></div>
+                                <div><a href="#">2G Migration</a></div>
+                                <div><a href="#">Voicemail Help</a></div>
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+  </div>
+</div>
+<!-- header ends -->
+
+
+<!-- body starts -->
+<div class="maindiv">
+    <div id="mobileview" *ngIf="isMobile">
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active"><a [routerLink]="['shop']" (click)="shopMenu()">Shop</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['refill']" (click)="refillMenu()">Refill / Add</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['activate']" (click)="activateMenu()">Activate</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['help']" (click)="helpMenu()">Help</a></li>
+        </ul>
+    </div>
+  <router-outlet></router-outlet>
+</div>
+<!-- body ends -->
+
+<!-- footer starts -->
+<div class="row">
+<div class="footer">
+  <div class="logo" align="center">
+    <img src="assets/images/img_tracfone_reverse_logo.png" />
+  </div>
+  <div class="hrule"><hr/></div>
+  <div class="links">
+    <ul>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Unlocking Policy</a></li>
+      <li><a href="#">Hearing and Compatibility</a></li>
+      <li><a href="#">Tracfone Blog</a></li>
+      <li><a href="#">Vendor Code</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Retailers</a></li>
+      <li><a href="#">Affiliate Program</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Become a Dealer</a></li>
+    </ul>
+  </div>
+  <div class="hrule"><hr/></div>
+  <div class="text-left col-lg-6 col-md-6 col-sm-8 col-xs-12">
+    <p>∆Standard text message/data fees may apply based on your mobile phone service. By texting keywords to 611611 you are consenting to receive response messages.</p>
+    <p>TracFone is a registered trademark of TracFone Wireless, Inc., a subsidiary of America Móvil.
+      All other trademarks, service marks, and trade names referenced in this site are the property of their respective owners. 
+      © 2017 TRACFONE ®</p>
+   </div>
+</div>
+<!-- footer ends -->
+
+</div>
+</div>
